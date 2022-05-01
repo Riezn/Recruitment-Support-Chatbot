@@ -1,0 +1,532 @@
+{
+    "intents": [
+        {
+            "intent": "skck",
+            "input": [
+                "dimana cari skck?",
+                "bagaimana cara buat skck?",
+                "apa itu skck?",
+                "apakah skck saya masih berlaku?",
+                "berapa lama skck saya bisa digunakan?",
+                "apakah boleh tidak mencantumkan skck?",
+                "bagaimana kalau saya tidak punya skck?",
+                "siapa yang membuat skck?",
+                "bagaimana kalau skck saya tidak lagi berlaku?",
+                "gimana kalau skckku sudah kadaluarsa?",
+                "skck punyaku sudah expire",
+                "aku ga punya skck",
+                "saya tidak punya skck",
+                "skck punyaku hilang",
+                "skck hilang",
+                "skck kadaluarsa"
+            ],
+            "response": [
+                "Surat Keterangan Catatan Kepolisian (SKCK) merupakan syarat wajib pendaftaran dan bisa dibuat secara online melalui https://ditintelkam.ntb.polri.go.id/skck/ atau dibuat langsung di Polda/Polres/Polsek terdekat dengan membawa dokumen persyaratan yang dibutuhkan. SKCK berlaku selama enam bulan setelah diterbitkan."
+            ]
+        },
+        {
+            "intent": "daftar",
+            "input": [
+                "dimana daftarnya?",
+                "cara daftar rekrutmen gimana?",
+                "bagaimana cara daftar rekrutmen?",
+                "dimana form rekrutmennya?",
+                "ikut rekrutmen dimana?",
+                "kalau mau ikut ngelamar dimana?",
+                "mau ikut lamaran dimana?",
+                "gimana kalau mau ikut lamaran?",
+                "cara daftar kerja bagaimana?",
+                "daftarnya dimana?",
+                "aku mau ikut rekrutmen ",
+                "saya mau ikut lamaran ",
+                "ngelamarnya dimana?",
+                "ngelamarnya gimana?",
+                "ikutan rekrutmen dimana?",
+                "ikutan rekrutmen gimana?",
+                "bagaimana kalau mau ikut rekrutmen?",
+                "bagaimana cara melamar?",
+                "ikut daftar kerja",
+                "mau daftar kerja",
+                "mau cari kerja disini",
+                "ikutan lamar kerja disini"
+            ],
+            "response": [
+                "Untuk mengikuti rekrutmen ini, mohon ikuti langkah berikut ya, Kak:\n1. Baca tata cara melamar di https://rekrutmen.fiktif.id/tatacara\n2. Buat akun di https://rekrutmen.fiktif.id/registrasi menggunakan alamat email dan nomor telepon aktif milik pribadi\n3. Lengkapi formulir pendaftaran dan upload seluruh dokumen yang dibutuhkan dan tunggu pengumuman tahap berikutnya di https://rekrutmen.fiktif.id/news atau email masing-masing"
+            ]
+        },
+        {
+            "intent": "qualification",
+            "input": [
+                "apa kompetensi yang dibutuhkan role data scientist?",
+                "apa kompetensi yang dibutuhkan posisi data scientist?",
+                "kompetensi buat scientist apa aja?",
+                "data scientist harus bisa apa?",
+                "lulusan non teknik bisa daftar jadi data scientist?",
+                "kalau ga bisa IT bisa jadi data scientist?",
+                "kalau belum punya pengalaman bisa jadi data scientist?",
+                "kualifikasi data scientist gimana?",
+                "daftar jadi data scientist harus bisa apa aja?",
+                "kalau jurusan tidak tertulis apa bisa jadi data scientist?",
+                "bagaimana kualifikasi data scientist yang dicari?",
+                "kalau ga bisa data science boleh daftar data scientist?",
+                "ga bisa coding boleh daftar data science?",
+                "ga bisa coding boleh daftar data scientist?",
+                "ga ngerti data science tapi mau daftar",
+                "belum punya pengalaman mau daftar data scientist",
+                "pengalaman lebih dari tiga tahun mau lamar data scientist"
+            ],
+            "response": [
+                "Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"
+            ]
+        },
+        {
+            "intent": "penutup",
+            "input": [
+                "thanks",
+                "thank you",
+                "trims",
+                "terima kasih",
+                "terimakasih",
+                "sankyu",
+                "sengkyu",
+                "thnx",
+                "thx",
+                "tq",
+                "tengkyu",
+                "trmksh",
+                "makasih",
+                "sampai jumpa",
+                "bye",
+                "sayonara",
+                "good bye",
+                "gbye",
+                "thanx",
+                "dadah",
+                "dah"
+            ],
+            "response": [
+                "Terima kasih telah bertanya. Senang bisa membantumu :D"
+            ]
+        },
+        {
+            "intent": "transkrip-ijazah",
+            "input": [
+                "bagaimana jika saya punya dua ijazah di strata yg sama?",
+                "transkrip saya ada dua halaman, gimana dong?",
+                "yang disertakan ijazah asli atau fotokopi?",
+                "kalau belum ada ijazah bagaimana?", 
+                "Jika ada dua ijazah, ijazah mana yg disertakan?",
+                "ijazah saya masih ditahan univ", 
+                "belum jadi ijazahnya",
+                "transkrip/ijazah masi ditahan kampus",
+                "Kenapa saya gagal terus unggah ijazah?",
+                "unggah ijazahnya gagal terus nih", 
+                "ijazah dan transkrip masih ditangguhkan",
+                "apakah boleh pake SKL?",
+                "ijazah belum ada nih, adanya Surat Keterangan Lulus",
+                "saya hanya memiliki Surat Keterangan Lulus",
+                "pendidikan terakhir saja kah yang harus diunggah ijazahnya?"
+            ],
+            "response": [
+                "Setiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
+            ]
+        },
+        {
+            "intent": "sertifikat",
+            "input": [
+                "Bagaimana jika ada lebih dari 1 sertifikat?",
+                "sertifikat apa yg berlaku", 
+                "bagaimana jika sertifikatnya kadaluarsa",
+                "sertifikat lomba boleh dicantumkan?", 
+                "sertifikatnya apanih?",
+                "jenis sertifikatnya apa? pelatihan/lomba/tes?",
+                "kalo ga punya sertif gimananih?",
+                "Berapa sertif yang harus diupload?",
+                "sertif pelatihan boleh dicantumkan?",
+                "sertifikat toefl boleh dicantumkan kah?",
+                "saya gapernah ikut sertifikasi apapun",
+                "unggah sertifikatnya gagal terus",
+                "bagaimana jika tidak memiliki sertifikat apapun?",
+                "berapa maksimal sertif yang diunggah?"
+            ],
+            "response": [
+                "Sertifikat yang dicantumkan haruslah sertifikat yang berlaku yaitu sertifikat yang tidak melebihi tanggal kadaluarsa lisensi, jika ada lebih dari 1 dokumen harap dikumpulkan dalam 1 file tidak lebih dari 1MB. Partisipan dibebaskan untuk mencantumkan sertifikat yang berkaitan dengan posisi yang dilamar. Pencantuman sertifikat bersifat opsional, bukan hal wajib"
+            ]
+        },
+        {
+            "intent": "lowongan",
+            "input": [
+                "Ada berapa lowongan yang dibuka?",
+                "lowongannya apa aja?",
+                "saya bisa melamar untuk posisi apa saja?",
+                "ada posisi apa saja?",
+                "Apa posisi yang tersedia?",
+                "ada info lowongan?",
+                "lagi buka lowongan ga?",
+                "info lowongannya tolong",
+                "boleh minta informasi tentang lowongan kerja?",
+                "Saya sedang mencari info lowongan kerja, apakah ada lowongan yang terbuka untuk saat ini?",
+                "boleh minta info lokernya?",
+                "apakah ada job vacancy?"],
+            "response": [
+                "Saat ini PT Fiktif sedang membuka lowongan untuk posisi Data Analyst, Data Scientist, dan Data Engineer. Yuk daftar lewat https://rekrutmen.fiktif.id/"
+            ]
+        },
+        {
+            "intent": "responsibilities-DS",
+            "input": [
+                "apa aja nih kerjaannya DS?",
+                "apa aja nih kerjaannya scientist?",
+                "apa aja nih kerjaannya data scientist?",
+                "Data Scientist ngapain aja?",
+                "scientist ngapain aja?",
+                "data scientist di posisi ini akan melakukan apa?",
+                "apa yang dilakukan Data scientist?",
+                "DS kerjanya apa?",
+                "Data scientist dikasi tugas apa aja?",
+                "kalo jadi scientist ngapain aja ya?",
+                "kontribusi apa yang harus saya berikan jika saya menjadi data scientist?",
+                "apa yg dapat saya bantu jika saya menjadi data scientist di perusahaan ini?",
+                "Data scientist tanggung jawabnya apa?",
+                "jobdesc Data Scientist apa aja?",
+                "data scientist punya job description apa aja?",
+                "Apa tugas DS?",
+                "Apa tugas Data Scientist?",
+                "Apa tugas Scientist?",
+                "tugas scientist apa saja?", 
+                "amanah apa yang dibebankan kepada data scientist?",
+                "apa saja to do list data scientist?",
+                "data scientist bertanggung jawab atas apa saja?",
+                "tanggung jawab DS apa saja?",
+                "apa saja yang akan dilakukan data scientist?"
+            ],
+            "response": [
+                "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"
+            ]
+        },
+        {
+            "intent": "nama_bot",
+            "input": [
+                "Kamu siapa?", 
+                "nama kamu siapa?", 
+                "kamu ini apa?", 
+                "Siapa kamu?", 
+                "kamu sebagai apa disini?",
+                "nama_bot itu apa yah?",
+                "siapa itu nama_bot",
+                "ini dengan siapa ya?"
+            ],
+            "response": [
+                "Halo aku adalah bot yang dapat menjawab pertanyaan-pertanyaan seputar rekrutmen PT Fiktif",
+                "Hai, nama_bot adalah asisten yang akan membantu Kakak menjawab pertanyaan-pertanyaan seputar rekrutmen PT Fiktif"
+            ]
+        },
+        {
+            "intent": "timeline",
+            "input": [
+                "bagaimana tahapan rekrutmen", 
+                "bagaimana timeline rekrutmen", 
+                "apa saja tahapan rekrutmen", 
+                "apa saja timeline rekrutmen", 
+                "waktu rekrutmen", 
+                "kapan batas waktu rekrutmen", 
+                "kapan deadline rekrutmen",
+                "bagaimana tahapan perekrutan", 
+                "bagaimana timeline perekrutan", 
+                "apa saja tahapan perekrutan", 
+                "apa saja timeline perekrutan", 
+                "waktu perekrutan", 
+                "kapan batas waktu perekrutan", 
+                "kapan deadline perekrutan",
+                "bagaimana tahapan lamaran", 
+                "bagaimana timeline lamaran", 
+                "apa saja tahapan lamaran", 
+                "apa saja timeline lamaran", 
+                "waktu lamaran", 
+                "kapan batas waktu lamaran", 
+                "kapan deadline lamaran",
+                "bagaimana tahapan lowongan", 
+                "bagaimana timeline lowongan", 
+                "apa saja tahapan lowongan", 
+                "apa saja timeline lowongan", 
+                "waktu lowongan", 
+                "kapan batas waktu lowongan", 
+                "kapan deadline lowongan",
+                "timeline", 
+                "waktu", 
+                "batas waktu", 
+                "tahapan", 
+                "deadline"
+            ],
+            "response": [
+                "Tahapan rekrutmen PT Fiktif adalah sebagai berikut:\n1. Pendaftaran online (1 Jan 2025 s/d 20 Jan 2025)\n2. Pengumuman kelulusan administrasi online (30 Jan 2025)\n3. Tes Kemampuan Dasar dan Psikologi (TKDP) di kantor cabang PT Fiktif (10 Feb 2025 s/d 20 Feb 2025)\n4. Pengumuman kelulusan TKDP (28 Feb 2025)\n5. Tes Kemampuan Bidang dan Wawancara (TKBW) di kantor cabang PT Fiktif (10 Mar 2025 s/d 14 Mar 2025)\n6. Pengumuman penerimaan (31 Mar 2025)"
+            ]
+        },
+        {
+            "intent": "dokumen",
+            "input": [
+                "apa saja dokumen dibutuhkan", 
+                "apa saja dokumen diperlukan", 
+                "dokumen yang diminta", 
+                "dokumen yang harus diupload", 
+                "dokumen lamaran", 
+                "dokumen penting",
+                "apa saja berkas dibutuhkan", 
+                "apa saja berkas diperlukan", 
+                "berkas yang diminta", 
+                "berkas yang harus diupload", 
+                "berkas lamaran", 
+                "berkas penting",
+                "apa saja file dibutuhkan", 
+                "apa saja file diperlukan", 
+                "file yang diminta", 
+                "file yang harus diupload", 
+                "file lamaran", 
+                "file penting",
+                "dokumen",
+                "butuh dokumen apa aja",
+                "berkas", 
+                "file"
+            ],
+            "response": [
+                "Berikut dokumen penting yang harus Anda upload pada halaman data diri pelamar: \n1. CV \n2. KTP \n3. Foto Formal Terbaru \n4. SKCK \n5. Ijazah \n6. Transkrip Nilai \n\nMohon pastikan file yang akan diupload adalah file asli dan bukan fotokopi, serta memenuhi ketentuan yang berlaku untuk masing-masing file."
+            ]
+        },
+        {
+            "intent": "biaya",
+            "input": [
+                "berapa biaya pendaftaran",
+                "berapa biaya pendaftaran kerja",
+                "berapa biaya daftar kerja",
+                "berapa biaya daftar",    
+                "berapa biaya lamaran", 
+                "berapa harga lamaran", 
+                "berapa tarif lamaran", 
+                "apakah ada calo", 
+                "apakah bisa sogok", 
+                "apakah bisa membayar untuk lulus", 
+                "agar lulus bayar berapa",
+                "berapa biaya lowongan", 
+                "berapa harga lowongan", 
+                "berapa tarif lowongan", 
+                "berapa biaya rekrutmen", 
+                "berapa harga rekrutmen", 
+                "berapa tarif rekrutmen",
+                "berapa biaya perekrutan",
+                "berapa harga perekrutan", 
+                "berapa tarif perekrutan", 
+                "biaya", 
+                "harga", 
+                "tarif", 
+                "calo", 
+                "sogok", 
+                "suap", 
+                "bayar"
+            ],
+            "response": [
+                "Proses rekrutmen di PT Fiktif tidak dipungut biaya sepeser pun ya.\n\nJika ada pihak yang menjanjikan penerimaan dengan meminta bayaran, jangan diikuti ya karena bisa dipastikan bahwa pihak tersebut adalah penipu.\n\nSetiap upaya suap-menyuap sebagaimana yang dimaksudkan sebelumnya akan ditindak secara tegas oleh pihak berwajib sesuai dengan hukum dan aturan yang berlaku."
+            ]
+        },
+        {
+            "intent": "lupa password",
+            "input": [
+                "lupa password", 
+                "lupa sandi", 
+                "lupa kata sandi", 
+                "password tidak ingat", 
+                "sandi tidak ingat", 
+                "kata sandi tidak ingat",
+                "ga ingat password", 
+                "ga ingat sandi", 
+                "ga ingat kata sandi", 
+                "password gak inget", 
+                "sandi gak inget", 
+                "kata sandi gak inget",
+                "cek password dimana", 
+                "cek sandi dimana", 
+                "cek kata sandi dimana", 
+                "password apa", 
+                "sandi apa", 
+                "kata sandi apa",
+                "password", 
+                "sandi", 
+                "kata sandi"
+            ],
+            "response": [
+                "Jika kehilangan atau lupa dengan password akun, silakan klik link berikut https://rekrutmen.fiktif.id/lupapassword dan ikuti petunjuk di halaman tersebut ya, Kak. Pastikan email Kakak dapat diakses. Sistem akan mengirimkan email untuk konfirmasi pengaturan ulang password.\n\nPassword harus terdiri dari minimal 8 karakter dan merupakan kombinasi dari angka, huruf besar, dan huruf kecil.\n\nJika password telah berhasil diganti, Kakak bisa login lagi menggunakan password baru yang telah dibuat.\n\nPasswordnya jangan diberitahu ke orang lain ya untuk menjaga keamanan data Kakak."
+            ]
+        },
+        {
+            "intent": "salary",
+            "input": [
+                "salary", 
+                "gaji", 
+                "take home pay", 
+                "take home paid", 
+                "tunjangan", 
+                "uang", 
+                "duit",
+                "berapa salary", 
+                "berapa gaji", 
+                "berapa take home pay", 
+                "berapa take home paid", 
+                "berapa tunjangan", 
+                "berapa dapat uang", 
+                "berapa dapat duit",
+                "berapa nominal salary", 
+                "berapa nominal gaji", 
+                "berapa nominal take home pay", 
+                "berapa nominal take home paid", 
+                "berapa nominal tunjangan", 
+                "berapa nominal uang", 
+                "berapa nominal duit",
+                "berapa jumlah salary", 
+                "berapa jumlah gaji", 
+                "berapa jumlah take home pay", 
+                "berapa jumlah take home paid", 
+                "berapa jumlah tunjangan", 
+                "berapa jumlah uang", 
+                "berapa jumlah duit",
+                "jumlah salary", 
+                "jumlah gaji", 
+                "jumlah take home pay", 
+                "jumlah take home paid", 
+                "jumlah tunjangan", 
+                "jumlah uang", 
+                "jumlah duit"
+            ],
+            "response": [
+                "Rentang gaji untuk seluruh posisi akan bergantung pada Tes Kemampuan Bidang dan Wawancara (TKBW). Gaji yang diterima selama tiga bulan masa percobaan adalah 60% dari yang disepakati saat tanda tangan perjanjian kerja."
+            ]
+        },
+        {
+            "intent": "training",
+            "input": [
+                "training", 
+                "masa training", 
+                "pelatihan", 
+                "masa pelatihan", 
+                "mentor", 
+                "pembimbing", 
+                "senior", 
+                "masa percobaan", 
+                "kontrak", 
+                "durasi kontrak",
+                "apakah ada training", 
+                "apakah ada pelatihan", 
+                "apakah ada mentor", 
+                "apakah ada pembimbing",
+                "berapa lama training", 
+                "berapa lama pelatihan", 
+                "berapa lama masa percobaan", 
+                "berapa lama kontrak",
+                "berapa lama durasi training", 
+                "berapa lama durasi pelatihan", 
+                "berapa lama durasi masa percobaan", 
+                "berapa lama durasi kontrak"
+            ],
+            "response": [
+                "Setiap pegawai baru akan mendapatkan pelatihan dari perusahaan dengan didampingi mentor dari masing-masing divisi. Pelatihan akan dilakukan selama satu bulan pertama di dalam masa percobaan.\n\nSelama masa percobaan, setiap pegawai baru akan mendapatkan serangkaian tugas yang berkaitan dengan pekerjaannya.\n\nDi akhir masa percobaan, mentor akan mengevaluasi performa pegawai baru dan menentukan apakah pegawai baru akan menjadi pegawai tetap atau akan mengakhiri kontrak kerja saat itu juga."
+            ]
+        },
+        {
+            "intent": "ktp",
+            "input": [
+                "Ukuran KTPnya berapa ya?", 
+                "ktp HItam Putih atau berwarna?", 
+                "ktp hilang harus gimana dong?",
+                "KTP asli atau photocopy?", 
+                "KTP asli atau fotokopi?", 
+                "KTP asli atau fotocopy?", 
+                "KTP asli atau fotkop?",
+                "KTP asli atau photcop?", 
+                "Kalau KTPnya hilang bagaimana?", 
+                "ukuran upload KTPnya berapa ya?", 
+                "Apakah bisa menggunakan selain KTP?", 
+                "Apakah pengumpulan KTP itu wajib?", 
+                "KTP itu apa sih?", 
+                "Mengapa harus mengumpulkan KTP?", 
+                "KTP harus discan saja?"
+            ],
+            "response": [
+                "KTP (Kartu Tanda Penduduk) menjadi persyaratan wajib pendaftaran. File KTP yang diupload berukuran bebas dan tidak lebih dari 1 MB dalam format file jpg, png, atau jpeg. KTP dan dokumen wajib pendaftaran harus diupload di https://rekrutmen.fiktif.id/dokumen.\n\nKTP yang hilang atau rusak dapat digantikan dengan membawa surat kehilangan dari Polda/Polsek/Polres terdekat dan disampaikan ke Dinas Kependudukan dan Catatan Sipil untuk mendapatkan KTP pengganti atau Surat Keterangan yang dapat mewakili KTP."
+            ]
+        },
+        {
+            "intent": "pas foto",
+            "input": [
+                "Berapa ketentuan ukuran pas fotonya?", 
+                "Pakaian apa yang digunakan untuk pas foto?", 
+                "Apa warna background pas foto yang digunakan?", 
+                "Apakah pas foto harus formal?", 
+                "Apakah boleh menggunakan foto lama?", 
+                "pas Foto berwarna atau hitam putih?", 
+                "Size untuk upload pas foto berapa?", 
+                "Kenapa harus pas foto formal?",
+                "Apakah pas foto harus dicetak?",
+                "Apa boleh pas foto memakai kemeja?",
+                "pasfoto gimana",
+                "pasfoto hilang",
+                "pasfoto ukuran berapa",
+                "gimana ketentuan pas foto",
+                "kemeja atau jas buat pasfoto"
+            ],
+            "response": [
+                "Pas foto merupakan dokumen wajib pendaftaran ya, Kak. Berikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg"
+            ]
+        },
+        {
+            "intent": "link sosmed",
+            "input": [
+                "Apa Twitter PT Fiktif?", 
+                "Apakah Sosmed PT Fiktif selalu update?", 
+                "Apa Facebook PT Fiktif?", 
+                "Apa Linkedln PT Fiktif ?", 
+                "Apakah Instagram PT Fiktif", 
+                "Apakah twitter @Fiktif_Real adalah milik PT Fiktif ?",
+                "JIka ingin mendapatkan informasi terbaru follow kemana?",
+                "Jika terdapat kendala, harus menghubungi kemana?",
+                "Jika ingin mengetahui informasi terbaru harus follow-up kemana?",
+                "Apa Facebook PT Fiktif"
+            ],
+            "response": [
+                "Informasi terbaru rekrutmen PT Fiktif dapat dilihat di sosial media kami ya dengan nama akun @FiktifID di Facebook, Instagram, dan Twitter. Jangan lupa follow dan subscribe ;)"
+            ]
+        },
+        {
+            "intent": "error upload",
+            "input": [
+                "Kok aku upload ga bisa?", 
+                "Berapa size untuk Upload KTP?", 
+                "Upload  harus PDF atau Jpg ?", 
+                "Upload selalu gagal, kenapa ya?", 
+                "Bagaimana cara memperkecil size file?",
+                "File terlalu besar padahal sudah pas, bagaimana cara uploadnya?",
+                "Upload lama sekali, apakah sedang gangguan?",
+                "Error Mulu, gimana cara uploadnya sih?", 
+                "Upload lama banget terus gagal, gimana ya caranya ?"
+            ],
+            "response": [
+                "Pastikan dokumen yang diupload telah memenuhi persyaratan yang diminta ya, Kak. Persyaratannya bisa dicek di https://rekrutmen.fiktif.id/ketentuan \n\nPastikan dokumen yang diupload tidak lebih dari 1 MB per dokumen.\nKalau masih mengalami kendala saat upload, mohon tunggu beberapa waktu untuk mencoba lagi ya."
+            ]
+        },
+        {
+            "intent": "pengantar",
+            "input": [
+                "emang PT Fiktif apa si?", 
+                "apa tuh PT Fiktif?", 
+                "PT Fiktif itu PT apa?", 
+                "wah apa tuh PT Fiktif?", 
+                "PT Fiktif emang apa?",
+                "PT Fiktif itu PT apa sih?",
+                "PT Fiktif Bergerak dibidang apa sih?",
+                "PT Fiktif perusahaan apa?", 
+                "PT Fiktif? Perusahaan apa itu?",
+                "Apa itu PT Fiktif?"
+            ],
+            "response": [
+                "PT Fiktif adalah perusahaan Fintech yang bergerak di bidang digital payment dan mengutamakan keamanan data, kenyamanan, serta kemudahan pelanggan."
+            ]
+        }
+    ]
+}

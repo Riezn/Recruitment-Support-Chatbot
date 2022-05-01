@@ -1,0 +1,69 @@
+[{
+   "intent": "responsibilities-DA",
+   "input": [
+        "apa aja nih kerjaannya DA?",
+        "apa aja nih kerjaannya analis?",
+        "apa aja nih kerjaannya data analis?",
+        "apa aja nih kerjaannya data analyst?",
+        "Data analyst ngapain aja?",
+        "analis ngapain aja?",
+        "data analyst di posisi ini akan melakukan apa?",
+        "apa yang dilakukan Data analyst?",
+        "DA kerjanya apa?",
+        "Data analyst dikasi tugas apa aja?",
+        "kalo jadi analis ngapain aja ya?",
+        "kontribusi apa yang harus saya berikan jika saya menjadi data analyst?",
+        "apa yg dapat saya bantu jika saya menjadi data analyst di perusahaan ini?",
+        "Data analyst tanggung jawabnya apa?",
+        "Apa tugas DA?",
+        "Apa tugas Data analyst?",
+        "Apa tugas analyst?",
+        "Apa tugas analis?",
+        "tugas analyst apa saja?",
+        "tugas analis apa saja?",
+        "amanah apa yang dibebankan kepada data analyst?",
+        "apa saja to do list data analyst?",
+        "data analyst bertanggung jawab atas apa saja?",
+        "tanggung jawab DA apa saja?",
+        "apa saja yang akan dilakukan data analyst?"
+   ],
+   "response": [
+       "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Analyst:\n- Mengumpulkan dan menyediakan data untuk membantu stakeholder lain meningkatkan metrik bisnis perusahaan dan retensi pelanggan\n- Menganalisis data untuk menemukan insight yang dapat ditindaklanjuti seperti membuat funnel conversion analysis, cohort analysis, long-term trends, user segmentation, dan dapat membantu meningkatkan kinerja perusahaan dan mendukung pengambilan keputusan yang lebih baik\n - Mengidentifikasi kebutuhan dan peluang bisnis berdasarkan data yang tersedia "
+   ]
+},
+{
+    "tag": "responsibilities-DE",
+    "patterns": [
+        "apa aja nih kerjaannya DE?",
+        "apa aja nih kerjaannya engineer?",
+        "apa aja nih kerjaannya data engineer?",
+        "Data engineer ngapain aja?",
+        "engineer ngapain aja?",
+        "data engineer di posisi ini akan melakukan apa?",
+        "apa yang dilakukan Data engineer?",
+        "DE kerjanya apa?",
+        "Data engineer dikasi tugas apa aja?",
+        "kalo jadi engineer ngapain aja ya?",
+        "kontribusi apa yang harus saya berikan jika saya menjadi data engineer?",
+        "apa yg dapat saya bantu jika saya menjadi data engineer di perusahaan ini?",
+        "Data engineer tanggung jawabnya apa?",
+        "Apa tugas DE?",
+        "Apa tugas Data engineer?",
+        "Apa tugas engineer?",
+        "tugas engineer apa saja?", 
+        "amanah apa yang dibebankan kepada data engineer?",
+        "apa saja to do list data engineer?",
+        "data engineer bertanggung jawab atas apa saja?",
+        "tanggung jawab DE apa saja?",
+        "apa saja yang akan dilakukan data engineer?"
+    ],
+    "responses": [
+        "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Engineer:\n- Membangun dan menjaga end-to-end data pipeline dari input dan output heterogen\n- Menangani dan mengelola data warehouse\n- Membantu tim mentransformasikan data (ETL) dan mengembangkan proses ETL dari beberapa sumber\n- Menganalisis dan mengorganisir data mentah \n- Memastikan kualitas data dan integrasi data"
+    ]
+}
+]
+
+gaji DADEDS
+"response": [
+    "Nominal gaji untuk Data Engineer: 6 s/d 10 juta rupiah. \nNominal gaji untuk Data Analyst: 7 s/d 11 juta rupiah. \nNominal gaji untuk Data Scientist: 8 s/d 12 juta rupiah. \nAngka tersebut sudah termasuk tunjangan transportasi, telekomunikasi, dan kebutuhan pokok. \nAngka tersebut belum termasuk tunjangan kesehatan dan tunjangan jabatan. \nJumlah gaji yang akan Anda terima sangat bergantung pada seberapa besar kemampuan Anda dan seberapa banyak pengalaman Anda pada bidang terkait. Perihal tersebut akan dinilai oleh Technical Interviewer pada tahapan seleksi Tes Kemampuan Bidang dan Wawancara (TKBW). \nGaji yang diterima pegawai selama masa training/pelatihan adalah 80% dari gaji normalnya."
+]
