@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request
 import json
 import string
 import pickle
@@ -7,20 +7,36 @@ import pandas as pd
 import tensorflow as tf
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+import telegram
+from telegram.ext.updater import Updater
+from telegram.update import Update
+from telegram.ext.callbackcontext import CallbackContext
+from telegram.ext.commandhandler import CommandHandler
+from telegram.ext.messagehandler import MessageHandler
+from telegram.ext.filters import Filters
+from sklearn.preprocessing import LabelEncoder
+
+global bot
+global TOKEN
+global URL
 
 app = Flask(__name__)
+
 
 # Define stemmer
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 
+
 # Define stopword
 factory = StopWordRemoverFactory()
 stopwords = factory.get_stop_words()
 
+
 # Load json file
 f = open('intent/intent.json', 'r')
 intent_json = json.load(f)
+
 
 # Define slang dictionary
 slang = pd.read_csv('lexicon/slang ke semi baku.csv')
@@ -28,18 +44,22 @@ slang_replace = {}
 for i, row in enumerate(slang['slang']):
     slang_replace[row] = slang['formal'].iloc[i]
 
+
 # Define std word dictionary
 baku = pd.read_csv('lexicon/slang ke baku.csv')
 std_word_replace = {}
 for i, row in enumerate(baku['slang']):
     std_word_replace[row] = baku['baku'].iloc[i]
 
+
 # Load TF model
 model = tf.keras.models.load_model('saved_model/model')
+
 
 # Load OHE for intent
 with open("saved_model/encoder.pkl", "rb") as f:
     le = pickle.load(f)
+
 
 # Load text vectorization layer
 from_disk = pickle.load(open("saved_model/textvect.pkl", "rb"))
@@ -100,25 +120,51 @@ def bot_response(text):
             if label_pred['intent'] == res:
                 response = label_pred['response']
     else:
-        response = ['Maaf, saya tidak mengerti']
+        response = ['Maaf, saya tidak mengerti chat dari Kakak']
     
     dict_temp = []
     for i in range(len(pred[0])):
         temp = {le.classes_[i]: pred[0][i]}
         dict_temp.append(temp)
-    return response
+    return np.random.choice(response)
 
 
-@app.route("/", methods=['GET','POST'])
-def model_prediction():
-    if request.method == "POST":
-        content = request.json
-        try:
-            response = {"code": 200, "status":"OK", 
-                        "result":bot_response(content['text'])}
-            return jsonify(response)
-        except Exception as e:
-            response = {"code":500, "status":"ERROR", 
-                        "result":{"error_msg":str(e)}}
-            return jsonify(response)
-    return "<p>Please insert your data in FE side.</p>"
+# URL = 'https://fiktifid-bot.herokuapp.com/'
+TOKEN = '5344905264:AAEeMLsjz3YpMC-ZErwJxXVUZu0z6xvjyhI'
+# bot = telegram.Bot(token=TOKEN)
+
+# @app.route('/setwebhook', methods=['GET', 'POST'])
+# def set_webhook():
+#     # we use the bot object to link the bot to our app which live
+#     # in the link provided by URL
+#     s = bot.setWebhook(URL)
+#     # something to let us know things work
+#     if s:
+#         return "webhook setup ok"
+#     else:
+#         return "webhook setup failed"
+   
+def start(update: Update, context: CallbackContext):
+    update.message.reply_text(
+        "Halo, selamat datang. Ada yang bisa dibantu seputar rekrutmen PT Fiktif?")
+
+def help(update: Update, context: CallbackContext):
+    update.message.reply_text("""Hubungi developer untuk bantuan lebih lanjut.\n\rhttps://github.com/Riezn/.""")
+
+
+def reply(update, context):
+    user_input = str(update.message.text)
+    update.message.reply_text(bot_response(user_input))
+
+def main():
+    updater = Updater(TOKEN, use_context=True)
+    dp = updater.dispatcher
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("help", help))
+    dp.add_handler(MessageHandler(Filters.text, reply))
+    
+    updater.start_polling()
+    updater.idle()
+
+    
+main()

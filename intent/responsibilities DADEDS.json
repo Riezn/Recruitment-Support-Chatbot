@@ -60,10 +60,36 @@
     "responses": [
         "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Engineer:\n- Membangun dan menjaga end-to-end data pipeline dari input dan output heterogen\n- Menangani dan mengelola data warehouse\n- Membantu tim mentransformasikan data (ETL) dan mengembangkan proses ETL dari beberapa sumber\n- Menganalisis dan mengorganisir data mentah \n- Memastikan kualitas data dan integrasi data"
     ]
+},
+{
+    "tag": "responsibilities-DS",
+    "patterns": [
+        "apa aja nih kerjaannya DS?",
+        "apa aja nih kerjaannya scientist?",
+        "apa aja nih kerjaannya data scientist?",
+        "Data scientist ngapain aja?",
+        "scientist ngapain aja?",
+        "data scientist di posisi ini akan melakukan apa?",
+        "apa yang dilakukan Data scientist?",
+        "DE kerjanya apa?",
+        "Data scientist dikasi tugas apa aja?",
+        "kalo jadi scientist ngapain aja ya?",
+        "kontribusi apa yang harus saya berikan jika saya menjadi data scientist?",
+        "apa yg dapat saya bantu jika saya menjadi data scientist di perusahaan ini?",
+        "Data scientist tanggung jawabnya apa?",
+        "Apa tugas DS?",
+        "Apa tugas Data scientist?",
+        "Apa tugas scientist?",
+        "tugas scientist apa saja?", 
+        "amanah apa yang dibebankan kepada data scientist?",
+        "apa saja to do list data scientist?",
+        "data scientist bertanggung jawab atas apa saja?",
+        "tanggung jawab DS apa saja?",
+        "apa saja yang akan dilakukan data scientist?"
+    ],
+    "responses": [
+        "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"
+    ]
 }
 ]
 
-gaji DADEDS
-"response": [
-    "Nominal gaji untuk Data Engineer: 6 s/d 10 juta rupiah. \nNominal gaji untuk Data Analyst: 7 s/d 11 juta rupiah. \nNominal gaji untuk Data Scientist: 8 s/d 12 juta rupiah. \nAngka tersebut sudah termasuk tunjangan transportasi, telekomunikasi, dan kebutuhan pokok. \nAngka tersebut belum termasuk tunjangan kesehatan dan tunjangan jabatan. \nJumlah gaji yang akan Anda terima sangat bergantung pada seberapa besar kemampuan Anda dan seberapa banyak pengalaman Anda pada bidang terkait. Perihal tersebut akan dinilai oleh Technical Interviewer pada tahapan seleksi Tes Kemampuan Bidang dan Wawancara (TKBW). \nGaji yang diterima pegawai selama masa training/pelatihan adalah 80% dari gaji normalnya."
-]

@@ -1,0 +1,8 @@
+pandas
+flask
+tensorflow-cpu
+numpy
+Sastrawi
+python-telegram-bot
+gunicorn
+scikit-learn

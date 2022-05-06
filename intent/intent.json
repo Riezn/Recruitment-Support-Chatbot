@@ -1,6 +1,33 @@
 {
     "intents": [
         {
+            "intent": "sapa",
+            "input": [
+                "halo",
+                "hei",
+                "hey",
+                "hello",
+                "hallo",
+                "hai",
+                "hay",
+                "selamat pagi",
+                "selamat siang",
+                "selamat malam",
+                "pagi",
+                "siang",
+                "malam",
+                "selamat sore",
+                "sore",
+                "apa kabar",
+                "P",
+                "Ping",
+                "helo"
+            ],
+            "response": [
+                "Halo, Kak!", "Hai :D", "Halo, ada yang bisa saya bantu? :)"
+            ]
+        },
+        {
             "intent": "skck",
             "input": [
                 "dimana cari skck?",
@@ -57,23 +84,22 @@
         {
             "intent": "qualification",
             "input": [
-                "apa kompetensi yang dibutuhkan role data scientist?",
-                "apa kompetensi yang dibutuhkan posisi data scientist?",
-                "kompetensi buat scientist apa aja?",
-                "data scientist harus bisa apa?",
-                "lulusan non teknik bisa daftar jadi data scientist?",
-                "kalau ga bisa IT bisa jadi data scientist?",
-                "kalau belum punya pengalaman bisa jadi data scientist?",
-                "kualifikasi data scientist gimana?",
-                "daftar jadi data scientist harus bisa apa aja?",
-                "kalau jurusan tidak tertulis apa bisa jadi data scientist?",
-                "bagaimana kualifikasi data scientist yang dicari?",
-                "kalau ga bisa data science boleh daftar data scientist?",
-                "ga bisa coding boleh daftar data science?",
-                "ga bisa coding boleh daftar data scientist?",
-                "ga ngerti data science tapi mau daftar",
-                "belum punya pengalaman mau daftar data scientist",
-                "pengalaman lebih dari tiga tahun mau lamar data scientist"
+                "apa kompetensi yang dibutuhkan role?",
+                "apa kompetensi yang dibutuhkan posisi?",
+                "kompetensi buat apa aja?",
+                "harus bisa apa?",
+                "lulusan non teknik bisa daftar jadi?",
+                "kalau ga bisa IT bisa jadi?",
+                "kalau belum punya pengalaman bisa jadi?",
+                "kualifikasi gimana?",
+                "daftar jadi harus bisa apa aja?",
+                "kalau jurusan tidak tertulis apa bisa jadi?",
+                "bagaimana kualifikasi yang dicari?",
+                "kalau ga bisa boleh daftar?",
+                "ga bisa coding boleh daftar?",
+                "ga ngerti tapi mau daftar",
+                "belum punya pengalaman mau daftar",
+                "pengalaman lebih dari tiga tahun mau lamar"
             ],
             "response": [
                 "Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"
@@ -125,10 +151,24 @@
                 "apakah boleh pake SKL?",
                 "ijazah belum ada nih, adanya Surat Keterangan Lulus",
                 "saya hanya memiliki Surat Keterangan Lulus",
-                "pendidikan terakhir saja kah yang harus diunggah ijazahnya?"
+                "pendidikan terakhir saja kah yang harus diunggah ijazahnya?",
+                "ijazahku hilang gimana ya",
+                "apakah ijazah SMA saja boleh",
+                "apakah ijazah SMK boleh",
+                "apakah ijazah D3 boleh",
+                "apakah ijazah D4 boleh",
+                "apakah ijazah S1 boleh",
+                "apakah ijazah S3 boleh",
+                "apakah ijazah S2 boleh",
+                "apakah ijazah doktor boleh",
+                "apakah ijazah PhD boleh",
+                "apakah ijazah Ph. D. boleh",
+                "apakah ijazah bachelor boleh",
+                "apakah ijazah master boleh",
+                "apakah ijazah magister boleh"
             ],
             "response": [
-                "Setiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
+                "Ijazah dan transkrip merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rSetiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
             ]
         },
         {
@@ -173,39 +213,36 @@
             ]
         },
         {
-            "intent": "responsibilities-DS",
+            "intent": "responsibilities",
             "input": [
-                "apa aja nih kerjaannya DS?",
-                "apa aja nih kerjaannya scientist?",
-                "apa aja nih kerjaannya data scientist?",
-                "Data Scientist ngapain aja?",
-                "scientist ngapain aja?",
-                "data scientist di posisi ini akan melakukan apa?",
-                "apa yang dilakukan Data scientist?",
-                "DS kerjanya apa?",
-                "Data scientist dikasi tugas apa aja?",
-                "kalo jadi scientist ngapain aja ya?",
-                "kontribusi apa yang harus saya berikan jika saya menjadi data scientist?",
-                "apa yg dapat saya bantu jika saya menjadi data scientist di perusahaan ini?",
-                "Data scientist tanggung jawabnya apa?",
-                "jobdesc Data Scientist apa aja?",
-                "data scientist punya job description apa aja?",
-                "Apa tugas DS?",
-                "Apa tugas Data Scientist?",
-                "Apa tugas Scientist?",
-                "tugas scientist apa saja?", 
-                "amanah apa yang dibebankan kepada data scientist?",
-                "apa saja to do list data scientist?",
-                "data scientist bertanggung jawab atas apa saja?",
-                "tanggung jawab DS apa saja?",
-                "apa saja yang akan dilakukan data scientist?"
+                "apa aja nih kerjaannya?",
+                "ngapain aja?",
+                "ngapain aja?",
+                "di posisi ini akan melakukan apa?",
+                "apa yang dilakukan?",
+                "kerjanya apa?",
+                "dikasi tugas apa aja?",
+                "kalo jadi ngapain aja ya?",
+                "kontribusi apa yang harus saya berikan jika saya menjadi?",
+                "apa yg dapat saya bantu jika saya menjadi di perusahaan ini?",
+                "tanggung jawabnya apa?",
+                "jobdesc apa aja?",
+                "punya job description apa aja?",
+                "Apa tugas?",
+                "Apa tugasnya",
+                "tugas apa saja?", 
+                "amanah apa yang dibebankan kepada?",
+                "apa saja to do list?",
+                "bertanggung jawab atas apa saja?",
+                "tanggung jawab apa saja?",
+                "apa saja yang akan dilakukan?"
             ],
             "response": [
                 "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"
             ]
         },
         {
-            "intent": "nama_bot",
+            "intent": "nama",
             "input": [
                 "Kamu siapa?", 
                 "nama kamu siapa?", 
@@ -213,12 +250,11 @@
                 "Siapa kamu?", 
                 "kamu sebagai apa disini?",
                 "nama_bot itu apa yah?",
-                "siapa itu nama_bot",
+                "siapa itu Fikbot",
                 "ini dengan siapa ya?"
             ],
             "response": [
-                "Halo aku adalah bot yang dapat menjawab pertanyaan-pertanyaan seputar rekrutmen PT Fiktif",
-                "Hai, nama_bot adalah asisten yang akan membantu Kakak menjawab pertanyaan-pertanyaan seputar rekrutmen PT Fiktif"
+                "Halo, Kak. Namaku Fikbot. Aku bisa membantu menjawab pertanyaan-pertanyaan Kakak seputar rekrutmen PT Fiktif"
             ]
         },
         {
@@ -256,7 +292,12 @@
                 "waktu", 
                 "batas waktu", 
                 "tahapan", 
-                "deadline"
+                "deadline",
+                "jadwalnya bagaimana ya?",
+                "jadwal rekrutmen bagaimana?",
+                "kapan jadwal rekrutmen?",
+                "jadwalnya lihat dimana ya?",
+                "jadwal lowongan bagaimana"
             ],
             "response": [
                 "Tahapan rekrutmen PT Fiktif adalah sebagai berikut:\n1. Pendaftaran online (1 Jan 2025 s/d 20 Jan 2025)\n2. Pengumuman kelulusan administrasi online (30 Jan 2025)\n3. Tes Kemampuan Dasar dan Psikologi (TKDP) di kantor cabang PT Fiktif (10 Feb 2025 s/d 20 Feb 2025)\n4. Pengumuman kelulusan TKDP (28 Feb 2025)\n5. Tes Kemampuan Bidang dan Wawancara (TKBW) di kantor cabang PT Fiktif (10 Mar 2025 s/d 14 Mar 2025)\n6. Pengumuman penerimaan (31 Mar 2025)"

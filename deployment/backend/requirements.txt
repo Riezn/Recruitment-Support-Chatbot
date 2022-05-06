@@ -1,9 +1,0 @@
-waitress
-pandas
-flask
-tensorflow-cpu
-json
-string
-pickle
-numpy
-Sastrawi
