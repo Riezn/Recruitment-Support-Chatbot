@@ -139,7 +139,7 @@ def bot_response(text):
 
 
 # URL = 'https://fiktifid-bot.herokuapp.com/'
-TOKEN = ''
+TOKEN = 'Insert Token Here'
 # bot = telegram.Bot(token=TOKEN)
 
 # @app.route('/setwebhook', methods=['GET', 'POST'])
