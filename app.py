@@ -68,6 +68,10 @@ textvect = tf.keras.layers.TextVectorization.from_config(from_disk['config'])
 textvect.adapt(tf.data.Dataset.from_tensor_slices(["xyz"]))
 textvect.set_weights(from_disk['weights'])
 
+# Remove certain words from stopwords
+stopwords.remove('ok')
+stopwords.remove('tidak')
+
 
 # Create text cleaning function
 def clean_text(text):
@@ -115,22 +119,27 @@ def bot_response(text):
     text = clean_text(text)
     pred = model.predict([text])
     res = le.classes_[pred.argmax()]
-    if textvect(text).numpy().max() > 1:
-        for label_pred in intent_json['intents']:
-            if label_pred['intent'] == res:
-                response = label_pred['response']
-    else:
-        response = ['Maaf, saya tidak mengerti chat dari Kakak']
-    
+    try:
+        if textvect(text).numpy().max() > 1:
+            for label_pred in intent_json['intents']:
+                if label_pred['intent'] == res:
+                    response = label_pred['response']
+        else:
+            response = ['Maaf, saya tidak mengerti']
+    except:
+        response = ['Maaf, saya tidak mengerti']
+
     dict_temp = []
     for i in range(len(pred[0])):
         temp = {le.classes_[i]: pred[0][i]}
         dict_temp.append(temp)
+    print(dict_temp)
+    print(le.classes_[pred.argmax()])
     return np.random.choice(response)
 
 
 # URL = 'https://fiktifid-bot.herokuapp.com/'
-TOKEN = '5344905264:AAEeMLsjz3YpMC-ZErwJxXVUZu0z6xvjyhI'
+TOKEN = ''
 # bot = telegram.Bot(token=TOKEN)
 
 # @app.route('/setwebhook', methods=['GET', 'POST'])
@@ -156,15 +165,21 @@ def reply(update, context):
     user_input = str(update.message.text)
     update.message.reply_text(bot_response(user_input))
 
+
+def error(update: Update, context: CallbackContext):
+    print(f"update{update} caused error {context.error}")
+
+
 def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(MessageHandler(Filters.text, reply))
+    dp.add_error_handler(error)
     
     updater.start_polling()
-    updater.idle()
+    updater.idle(10)
 
     
 main()

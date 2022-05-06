@@ -99,7 +99,9 @@
                 "ga bisa coding boleh daftar?",
                 "ga ngerti tapi mau daftar",
                 "belum punya pengalaman mau daftar",
-                "pengalaman lebih dari tiga tahun mau lamar"
+                "pengalaman lebih dari tiga tahun mau lamar",
+                "syarat jadi harus bisa apa aja?",
+                "syarat jadi apa?"
             ],
             "response": [
                 "Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"
@@ -128,7 +130,14 @@
                 "gbye",
                 "thanx",
                 "dadah",
-                "dah"
+                "dah",
+                "oke",
+                "ok",
+                "okay",
+                "okey",
+                "gatau",
+                "gamau",
+                "ga"
             ],
             "response": [
                 "Terima kasih telah bertanya. Senang bisa membantumu :D"
@@ -165,7 +174,9 @@
                 "apakah ijazah Ph. D. boleh",
                 "apakah ijazah bachelor boleh",
                 "apakah ijazah master boleh",
-                "apakah ijazah magister boleh"
+                "apakah ijazah magister boleh",
+                "saya belum lulus min gimana",
+                "min transkrip nilai saya ada 2 lembar "
             ],
             "response": [
                 "Ijazah dan transkrip merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rSetiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
@@ -207,7 +218,13 @@
                 "boleh minta informasi tentang lowongan kerja?",
                 "Saya sedang mencari info lowongan kerja, apakah ada lowongan yang terbuka untuk saat ini?",
                 "boleh minta info lokernya?",
-                "apakah ada job vacancy?"],
+                "apakah ada job vacancy?",
+                "ada lowongan apa nih di pt fiktif",
+                "ada loker ga",
+                "ada lowongan buat intern ga",
+                "intern",
+                "intern ada loker ga"
+            ],   
             "response": [
                 "Saat ini PT Fiktif sedang membuka lowongan untuk posisi Data Analyst, Data Scientist, dan Data Engineer. Yuk daftar lewat https://rekrutmen.fiktif.id/"
             ]
@@ -327,10 +344,31 @@
                 "dokumen",
                 "butuh dokumen apa aja",
                 "berkas", 
-                "file"
+                "file",
+                "daftar butuh apa aja"
             ],
             "response": [
                 "Berikut dokumen penting yang harus Anda upload pada halaman data diri pelamar: \n1. CV \n2. KTP \n3. Foto Formal Terbaru \n4. SKCK \n5. Ijazah \n6. Transkrip Nilai \n\nMohon pastikan file yang akan diupload adalah file asli dan bukan fotokopi, serta memenuhi ketentuan yang berlaku untuk masing-masing file."
+            ]
+        },
+        {
+            "intent": "CV",
+            "input": [
+                "CV seperti apa ya", 
+                "apakah cv wajib", 
+                "cover letter", 
+                "resume", 
+                "cv", 
+                "curriculum vitae",
+                "apakah cv dibutuhkan", 
+                "apa harus buat resume", 
+                "perlu buat cover letter ga", 
+                "rangkuman pendidikan seperti apa", 
+                "rangkuman pengalaman kerja", 
+                "rangkuman skill atau kemampuan"
+            ],
+            "response": [
+                "Curriculum Vitae (CV) wajib diupload bersama dokumen lain ya, Kak. Isi CV bisa mengikuti contoh-contoh yang ada di internet dan tidak lebih dari 1 halaman serta berukuran tidak lebih dari 1 MB."
             ]
         },
         {
@@ -434,7 +472,25 @@
                 "jumlah take home paid", 
                 "jumlah tunjangan", 
                 "jumlah uang", 
-                "jumlah duit"
+                "jumlah duit",
+                "gaji data scientist berapa",
+                "gaji data analyst berapa",
+                "gaji data engineer berapa",
+                "gaji scientist berapa",
+                "gaji analyst berapa",
+                "gaji engineer berapa",
+                "gaji data scientist",
+                "gaji data analyst",
+                "gaji data engineer",
+                "gaji analis berapa",
+                "gaji analis",
+                "data scientist digaji berapa ya?",
+                "data analyst digaji berapa ya?",
+                "data engineer digaji berapa ya?",
+                "salary data scientist berapa?",
+                "salary data analyst berapa?",
+                "salary data engineer berapa?"
+                
             ],
             "response": [
                 "Rentang gaji untuk seluruh posisi akan bergantung pada Tes Kemampuan Bidang dan Wawancara (TKBW). Gaji yang diterima selama tiga bulan masa percobaan adalah 60% dari yang disepakati saat tanda tangan perjanjian kerja."
@@ -487,7 +543,8 @@
                 "Apakah pengumpulan KTP itu wajib?", 
                 "KTP itu apa sih?", 
                 "Mengapa harus mengumpulkan KTP?", 
-                "KTP harus discan saja?"
+                "KTP harus discan saja?",
+                "kalau ktpnya hilang bagaimana"
             ],
             "response": [
                 "KTP (Kartu Tanda Penduduk) menjadi persyaratan wajib pendaftaran. File KTP yang diupload berukuran bebas dan tidak lebih dari 1 MB dalam format file jpg, png, atau jpeg. KTP dan dokumen wajib pendaftaran harus diupload di https://rekrutmen.fiktif.id/dokumen.\n\nKTP yang hilang atau rusak dapat digantikan dengan membawa surat kehilangan dari Polda/Polsek/Polres terdekat dan disampaikan ke Dinas Kependudukan dan Catatan Sipil untuk mendapatkan KTP pengganti atau Surat Keterangan yang dapat mewakili KTP."
@@ -510,10 +567,11 @@
                 "pasfoto hilang",
                 "pasfoto ukuran berapa",
                 "gimana ketentuan pas foto",
-                "kemeja atau jas buat pasfoto"
+                "kemeja atau jas buat pasfoto",
+                "apa yang harus dilakukan jika ukuran foto lebih dari 1mb"
             ],
             "response": [
-                "Pas foto merupakan dokumen wajib pendaftaran ya, Kak. Berikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg"
+                "Pas foto merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rBerikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg\n\n\rKalau ukuran file melebihi, silahkan diperkecil dulu dengan aplikasi edit foto."
             ]
         },
         {
@@ -528,7 +586,14 @@
                 "JIka ingin mendapatkan informasi terbaru follow kemana?",
                 "Jika terdapat kendala, harus menghubungi kemana?",
                 "Jika ingin mengetahui informasi terbaru harus follow-up kemana?",
-                "Apa Facebook PT Fiktif"
+                "Apa Facebook PT Fiktif",
+                "ada sosmed lain kah?",
+                "sosmed kak ",
+                "twitter",
+                "instagram",
+                "facebook",
+                "youtube",
+                "linkedin"
             ],
             "response": [
                 "Informasi terbaru rekrutmen PT Fiktif dapat dilihat di sosial media kami ya dengan nama akun @FiktifID di Facebook, Instagram, dan Twitter. Jangan lupa follow dan subscribe ;)"
