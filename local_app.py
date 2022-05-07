@@ -31,7 +31,10 @@ stemmer = factory.create_stemmer()
 # Define stopword
 factory = StopWordRemoverFactory()
 stopwords = factory.get_stop_words()
-
+stopwords.remove('ok')
+stopwords.remove('oh')
+stopwords.remove('tidak')
+stopwords.remove('ya')
 
 # Load json file
 f = open('intent/intent.json', 'r')
@@ -64,31 +67,17 @@ with open("saved_model/encoder.pkl", "rb") as f:
 # Load text vectorization layer
 from_disk = pickle.load(open("saved_model/textvect.pkl", "rb"))
 textvect = tf.keras.layers.TextVectorization.from_config(from_disk['config'])
+
 # Adapt to dummy data
 textvect.adapt(tf.data.Dataset.from_tensor_slices(["xyz"]))
 textvect.set_weights(from_disk['weights'])
-
-# Remove certain words from stopwords
-stopwords.remove('ok')
-stopwords.remove('tidak')
 
 
 # Create text cleaning function
 def clean_text(text):
     new_text = []
-
     text = text.lower() # Lowercase
-
-    # Remove punctuations
-    text = text.translate(
-        str.maketrans(
-            '',
-            '',
-            string.punctuation
-        )
-    )
-
-    # Split text into words then loop through each word
+    # Loop each word in a sentence
     for kata in text.split(): 
         # Keep word not in slang or standard word
         if kata not in (slang_replace|std_word_replace): 
@@ -98,18 +87,14 @@ def clean_text(text):
             new_text+=std_word_replace[kata].split() 
         # Replace slang with standard word
         elif kata in slang_replace:
-            new_text+=slang_replace[kata].split() 
-
-    # Join words without stopwords
+            for kata_slang in slang_replace[kata].split():
+                new_text.append(std_word_replace.get(kata_slang, kata_slang))
+    # Join words without stopwords after stemming
     new_text = ' '.join(
-        stemmer.stem(
-            std_word_replace.get(
-                word,
-                word
-            )
-        ) for word in new_text if word not in stopwords 
+        stemmer.stem(word) for word in new_text if word not in stopwords
     )
-    
+    # Remove punctuations
+    text = text.translate(str.maketrans('', '', string.punctuation))
     return new_text
 
 
@@ -118,28 +103,25 @@ def bot_response(text):
     """
     text = clean_text(text)
     pred = model.predict([text])
-    res = le.classes_[pred.argmax()]
+    res = le.classes_[pred.argmax()] # Get the index with highest probability
+    i = 0
     try:
-        if textvect(text).numpy().max() > 1:
-            for label_pred in intent_json['intents']:
-                if label_pred['intent'] == res:
-                    response = label_pred['response']
-        else:
-            response = ['Maaf, saya tidak mengerti']
-    except:
-        response = ['Maaf, saya tidak mengerti']
-
-    dict_temp = []
-    for i in range(len(pred[0])):
-        temp = {le.classes_[i]: pred[0][i]}
-        dict_temp.append(temp)
-    print(dict_temp)
-    print(le.classes_[pred.argmax()])
+        if textvect(text).numpy().max() > 1: # If the input is known word(s)
+            while i < len(intent_json['intents']):
+                if res == intent_json['intents'][i]['intent']:
+                    response = intent_json['intents'][i]['response']
+                    break
+                else:
+                    i+=1
+        else: # If only unknown word(s)
+            response = ['Maaf, Kak. Aku tidak mengerti...']
+    except: # If empty string or any error occured
+        response = ['Maaf, Kak. Aku tidak mengerti...']
     return np.random.choice(response)
 
 
 # URL = 'https://fiktifid-bot.herokuapp.com/'
-TOKEN = ''
+TOKEN = '5344905264:AAEeMLsjz3YpMC-ZErwJxXVUZu0z6xvjyhI'
 # bot = telegram.Bot(token=TOKEN)
 
 # @app.route('/setwebhook', methods=['GET', 'POST'])
@@ -158,7 +140,7 @@ def start(update: Update, context: CallbackContext):
         "Halo, selamat datang. Ada yang bisa dibantu seputar rekrutmen PT Fiktif?")
 
 def help(update: Update, context: CallbackContext):
-    update.message.reply_text("""Hubungi developer untuk bantuan lebih lanjut.\n\rhttps://github.com/Riezn/.""")
+    update.message.reply_text("""Hubungi developer untuk bantuan lebih lanjut.\n\rhttps://github.com/Riezn/""")
 
 
 def reply(update, context):
@@ -179,7 +161,7 @@ def main():
     dp.add_error_handler(error)
     
     updater.start_polling()
-    updater.idle(10)
+    updater.idle()
 
     
 main()

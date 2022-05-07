@@ -24,7 +24,7 @@
                 "helo"
             ],
             "response": [
-                "Halo, Kak!", "Hai :D", "Halo, ada yang bisa saya bantu? :)"
+                "Halo, Kak!", "Hai :D", "Halo, ada yang bisa saya bantu? :)", "Hai hai!", "Hola!"
             ]
         },
         {
@@ -87,6 +87,8 @@
                 "apa kompetensi yang dibutuhkan role?",
                 "apa kompetensi yang dibutuhkan posisi?",
                 "kompetensi buat apa aja?",
+                "apa kompetensi yang dicari",
+                "apa kompetensi",
                 "harus bisa apa?",
                 "lulusan non teknik bisa daftar jadi?",
                 "kalau ga bisa IT bisa jadi?",
@@ -137,7 +139,27 @@
                 "okey",
                 "gatau",
                 "gamau",
-                "ga"
+                "ga",
+                "oh",
+                "oks",
+                "oqe",
+                "oq",
+                "ya",
+                "sama-sama",
+                "samasama",
+                "masama",
+                "iya",
+                "iyah",
+                "iye",
+                "u r welcome",
+                "you are welcome",
+                "u are welcome",
+                "you r welcome",
+                "your welcome",
+                "ur welcome",
+                "yah",
+                "yeh",
+                "ye"
             ],
             "response": [
                 "Terima kasih telah bertanya. Senang bisa membantumu :D"
@@ -268,10 +290,11 @@
                 "kamu sebagai apa disini?",
                 "nama_bot itu apa yah?",
                 "siapa itu Fikbot",
-                "ini dengan siapa ya?"
+                "ini dengan siapa ya?",
+                "ini apa ya?"
             ],
             "response": [
-                "Halo, Kak. Namaku Fikbot. Aku bisa membantu menjawab pertanyaan-pertanyaan Kakak seputar rekrutmen PT Fiktif"
+                "Halo, Kak. Namaku Fikbot :D.\n\n\rAku bisa membantu menjawab pertanyaan-pertanyaan Kakak seputar rekrutmen PT Fiktif"
             ]
         },
         {
@@ -314,10 +337,20 @@
                 "jadwal rekrutmen bagaimana?",
                 "kapan jadwal rekrutmen?",
                 "jadwalnya lihat dimana ya?",
-                "jadwal lowongan bagaimana"
+                "jadwal lowongan bagaimana",
+                "dimana tesnya",
+                "dimana wawancaranya",
+                "dimana interviewnya",
+                "dimana interview",
+                "dimana wawancara",
+                "dimana tes",
+                "ujian dimana",
+                "ujiannya dimana",
+                "dimana ujiannya",
+                "dimana ujian"
             ],
             "response": [
-                "Tahapan rekrutmen PT Fiktif adalah sebagai berikut:\n1. Pendaftaran online (1 Jan 2025 s/d 20 Jan 2025)\n2. Pengumuman kelulusan administrasi online (30 Jan 2025)\n3. Tes Kemampuan Dasar dan Psikologi (TKDP) di kantor cabang PT Fiktif (10 Feb 2025 s/d 20 Feb 2025)\n4. Pengumuman kelulusan TKDP (28 Feb 2025)\n5. Tes Kemampuan Bidang dan Wawancara (TKBW) di kantor cabang PT Fiktif (10 Mar 2025 s/d 14 Mar 2025)\n6. Pengumuman penerimaan (31 Mar 2025)"
+                "Berikut keterangan tempat dan tanggal rekrutmen ya, Kak:\n1. Pendaftaran online 1 Jan 2025 s/d 20 Jan 2025\n2. Pengumuman kelulusan administrasi online 30 Jan 2025\n3. Tes Kemampuan Dasar dan Psikologi (TKDP) di kantor cabang PT Fiktif 10 Feb 2025 s/d 20 Feb 2025\n4. Pengumuman kelulusan TKDP 28 Feb 2025\n5. Tes Kemampuan Bidang dan Wawancara (TKBW) di kantor cabang PT Fiktif 10 Mar 2025 s/d 14 Mar 2025\n6. Pengumuman penerimaan 31 Mar 2025"
             ]
         },
         {
@@ -473,24 +506,8 @@
                 "jumlah tunjangan", 
                 "jumlah uang", 
                 "jumlah duit",
-                "gaji data scientist berapa",
-                "gaji data analyst berapa",
-                "gaji data engineer berapa",
-                "gaji scientist berapa",
-                "gaji analyst berapa",
-                "gaji engineer berapa",
-                "gaji data scientist",
-                "gaji data analyst",
-                "gaji data engineer",
-                "gaji analis berapa",
-                "gaji analis",
-                "data scientist digaji berapa ya?",
-                "data analyst digaji berapa ya?",
-                "data engineer digaji berapa ya?",
-                "salary data scientist berapa?",
-                "salary data analyst berapa?",
-                "salary data engineer berapa?"
-                
+                "digaji berapa ya?",
+                "salary berapa?"
             ],
             "response": [
                 "Rentang gaji untuk seluruh posisi akan bergantung pada Tes Kemampuan Bidang dan Wawancara (TKBW). Gaji yang diterima selama tiga bulan masa percobaan adalah 60% dari yang disepakati saat tanda tangan perjanjian kerja."
@@ -571,7 +588,7 @@
                 "apa yang harus dilakukan jika ukuran foto lebih dari 1mb"
             ],
             "response": [
-                "Pas foto merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rBerikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg\n\n\rKalau ukuran file melebihi, silahkan diperkecil dulu dengan aplikasi edit foto."
+                "Pas foto merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rBerikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg\n\n\rKalau ukuran file melebihi, silahkan diperkecil dulu dengan aplikasi untuk edit foto."
             ]
         },
         {

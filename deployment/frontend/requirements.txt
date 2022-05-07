@@ -1,8 +1,10 @@
 pandas
 flask
-tensorflow-cpu
 numpy
-Sastrawi
-python-telegram-bot
 gunicorn
+pandas
+Sastrawi
+telegram
+python-telegram-bot
+requests
 scikit-learn
