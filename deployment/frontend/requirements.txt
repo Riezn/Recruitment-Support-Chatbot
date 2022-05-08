@@ -1,7 +1,7 @@
 pandas
 flask
 numpy
-gunicorn
+waitress
 pandas
 Sastrawi
 telegram
