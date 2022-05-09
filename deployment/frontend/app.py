@@ -144,7 +144,6 @@ def reply(update, context):
     except:
         print("error")
         response = ['Maaf, Kak. Aku tidak mengerti chatnya...\n\n\rTerjadi error']
-    print(le.classes_[label_idx])
     update.message.reply_text(np.random.choice(response))
 
 
