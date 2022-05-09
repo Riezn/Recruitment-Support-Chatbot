@@ -91,7 +91,7 @@ with open("saved_model/encoder.pkl", "rb") as f:
 
 URL_backend = 'https://fiktifid-bot.herokuapp.com/'
 URL = 'https://fath-chatrec.herokuapp.com/'
-TOKEN = '5383280691:AAFm4p257C6c7Y9QRzCbnMdeE7Ysftz6Rb4'
+TOKEN = ''
 
 
 @app.route('/')

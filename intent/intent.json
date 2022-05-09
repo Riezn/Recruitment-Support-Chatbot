@@ -103,7 +103,8 @@
                 "belum punya pengalaman mau daftar",
                 "pengalaman lebih dari tiga tahun mau lamar",
                 "syarat jadi harus bisa apa aja?",
-                "syarat jadi apa?"
+                "syarat jadi apa?",
+                "kualifikasi jadi data scientist apa nih"
             ],
             "response": [
                 "Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"
@@ -198,7 +199,8 @@
                 "apakah ijazah master boleh",
                 "apakah ijazah magister boleh",
                 "saya belum lulus min gimana",
-                "min transkrip nilai saya ada 2 lembar "
+                "min transkrip nilai saya ada 2 lembar ",
+                "ko saya gabisa upload transkrip yah?"
             ],
             "response": [
                 "Ijazah dan transkrip merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rSetiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
@@ -274,7 +276,19 @@
                 "apa saja to do list?",
                 "bertanggung jawab atas apa saja?",
                 "tanggung jawab apa saja?",
-                "apa saja yang akan dilakukan?"
+                "apa saja yang akan dilakukan?",
+                "data scientist kerjaannya ngapain aja ",
+                "jobdesc data scientist apa aja",
+                "jobdesc data analyst apa aja",
+                "jobdesc data engineer apa aja",
+                "jobdesc ds apa aja",
+                "jobdesc de apa aja",
+                "jobdesc da apa aja",
+                "jobdesc data analis apa aja",
+                "jobdesc scientist apa aja",
+                "jobdesc analyst apa aja",
+                "jobdesc engineer apa aja",
+                "jobdesc analis apa aja"
             ],
             "response": [
                 "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"
@@ -537,7 +551,12 @@
                 "berapa lama durasi training", 
                 "berapa lama durasi pelatihan", 
                 "berapa lama durasi masa percobaan", 
-                "berapa lama durasi kontrak"
+                "berapa lama durasi kontrak",
+                "ada magangnya dulu ga? ",
+                "ada internnya dulu ga?",
+                "ada intern dulu ga?",
+                "ada internship dulu ga?",
+                "ada sejenis trainingnya gitu ga? "
             ],
             "response": [
                 "Setiap pegawai baru akan mendapatkan pelatihan dari perusahaan dengan didampingi mentor dari masing-masing divisi. Pelatihan akan dilakukan selama satu bulan pertama di dalam masa percobaan.\n\nSelama masa percobaan, setiap pegawai baru akan mendapatkan serangkaian tugas yang berkaitan dengan pekerjaannya.\n\nDi akhir masa percobaan, mentor akan mengevaluasi performa pegawai baru dan menentukan apakah pegawai baru akan menjadi pegawai tetap atau akan mengakhiri kontrak kerja saat itu juga."
@@ -561,7 +580,8 @@
                 "KTP itu apa sih?", 
                 "Mengapa harus mengumpulkan KTP?", 
                 "KTP harus discan saja?",
-                "kalau ktpnya hilang bagaimana"
+                "kalau ktpnya hilang bagaimana",
+                "ktpku hilang, gimana nih?"
             ],
             "response": [
                 "KTP (Kartu Tanda Penduduk) menjadi persyaratan wajib pendaftaran. File KTP yang diupload berukuran bebas dan tidak lebih dari 1 MB dalam format file jpg, png, atau jpeg. KTP dan dokumen wajib pendaftaran harus diupload di https://rekrutmen.fiktif.id/dokumen.\n\nKTP yang hilang atau rusak dapat digantikan dengan membawa surat kehilangan dari Polda/Polsek/Polres terdekat dan disampaikan ke Dinas Kependudukan dan Catatan Sipil untuk mendapatkan KTP pengganti atau Surat Keterangan yang dapat mewakili KTP."
