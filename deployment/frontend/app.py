@@ -128,7 +128,6 @@ def reply(update, context):
                         response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Analyst:\n- Mengumpulkan dan menyediakan data untuk membantu stakeholder lain meningkatkan metrik bisnis perusahaan dan retensi pelanggan\n- Menganalisis data untuk menemukan insight yang dapat ditindaklanjuti seperti membuat funnel conversion analysis, cohort analysis, long-term trends, user segmentation, dan dapat membantu meningkatkan kinerja perusahaan dan mendukung pengambilan keputusan yang lebih baik\n - Mengidentifikasi kebutuhan dan peluang bisnis berdasarkan data yang tersedia"]
                         break
                 elif le.classes_[label_idx] == 'qualification':
-                    dok = ner(data['user_input'])
                     if dok.ents[0].label_.lower()=='scientist':
                         response = ["Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
                         break
@@ -145,7 +144,7 @@ def reply(update, context):
     except:
         print("error")
         response = ['Maaf, Kak. Aku tidak mengerti chatnya...\n\n\rTerjadi error']
-    print(intent_json['intents'][i]['intent'])
+    print(le.classes_[label_idx])
     update.message.reply_text(np.random.choice(response))
 
 
