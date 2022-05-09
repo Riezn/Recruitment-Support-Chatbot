@@ -1,0 +1,11 @@
+pandas
+flask
+numpy
+waitress
+pandas
+Sastrawi
+telegram
+python-telegram-bot
+requests
+scikit-learn
+spacy
