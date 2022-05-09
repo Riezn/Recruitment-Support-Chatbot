@@ -43,21 +43,11 @@ f = open('intent/intent.json', 'r')
 intent_json = json.load(f)
 
 
-# Define slang dictionary
-slang = pd.read_csv('lexicon/slang ke semi baku.csv')
-slang_replace = {}
-for i, row in enumerate(slang['slang']):
-    slang_replace[row] = slang['formal'].iloc[i]
-
-
-# Define std word dictionary
-baku = pd.read_csv('lexicon/slang ke baku.csv')
+baku = pd.read_csv('lexicon/baku.csv')
 std_word_replace = {}
 for i, row in enumerate(baku['slang']):
     std_word_replace[row] = baku['baku'].iloc[i]
 
-# Load ner model
-ner = spacy.load('model-best')
 
 # Create text cleaning function
 def clean_text(text):
@@ -66,15 +56,11 @@ def clean_text(text):
     # Loop each word in a sentence
     for kata in text.split(): 
         # Keep word not in slang or standard word
-        if kata not in (slang_replace|std_word_replace): 
+        if kata not in std_word_replace: 
             new_text.append(kata) 
         # Replace non-formal word with standard word
         elif kata in std_word_replace:
             new_text+=std_word_replace[kata].split() 
-        # Replace slang with standard word
-        elif kata in slang_replace:
-            for kata_slang in slang_replace[kata].split():
-                new_text.append(std_word_replace.get(kata_slang, kata_slang))
     # Join words without stopwords after stemming
     new_text = ' '.join(
         stemmer.stem(word) for word in new_text if word not in stopwords
@@ -89,9 +75,13 @@ with open("saved_model/encoder.pkl", "rb") as f:
     le = pickle.load(f)
 
 
-URL_backend = '' # Link heroku tf model
-URL = '' # Link heroku preprocessing
-TOKEN = '' # Token from botfather telegram
+# Load ner model
+ner = spacy.load('model-best')
+
+
+URL_backend = ''
+URL = ''
+TOKEN = ''
 
 
 @app.route('/')
@@ -118,8 +108,9 @@ def reply(update, context):
     try:
         try:
             dok = ner(data['user_input'])
+            dok.ents[0].label_.lower()
         except:
-            dok = 0
+            dok = ner('ds')
         if label_idx != 1000:
             i = 0
             while i < len(intent_json['intents']):
@@ -136,9 +127,6 @@ def reply(update, context):
                     elif dok.ents[0].label_.lower()=='analis':
                         response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Analyst:\n- Mengumpulkan dan menyediakan data untuk membantu stakeholder lain meningkatkan metrik bisnis perusahaan dan retensi pelanggan\n- Menganalisis data untuk menemukan insight yang dapat ditindaklanjuti seperti membuat funnel conversion analysis, cohort analysis, long-term trends, user segmentation, dan dapat membantu meningkatkan kinerja perusahaan dan mendukung pengambilan keputusan yang lebih baik\n - Mengidentifikasi kebutuhan dan peluang bisnis berdasarkan data yang tersedia"]
                         break
-                    else:
-                        response = intent_json['intents'][i]['response']
-                        break
                 elif le.classes_[label_idx] == 'qualification':
                     dok = ner(data['user_input'])
                     if dok.ents[0].label_.lower()=='scientist':
@@ -150,9 +138,6 @@ def reply(update, context):
                     elif dok.ents[0].label_.lower()=='analis':
                         response = ["Untuk posisi Data Analyst ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik dan Inferensial untuk mencari peluang bisnis\n3. Memiliki pengalaman kerja di bidang Data Analyst selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data serta visualisasi dengan tools seperti Power BI, Tableau, dll.\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
                         break
-                    else:
-                        response = intent_json['intents'][i]['response']
-                        break
                 else:
                     i+=1
         else:
@@ -160,6 +145,7 @@ def reply(update, context):
     except:
         print("error")
         response = ['Maaf, Kak. Aku tidak mengerti chatnya...\n\n\rTerjadi error']
+    print(intent_json['intents'][i]['intent'])
     update.message.reply_text(np.random.choice(response))
 
 

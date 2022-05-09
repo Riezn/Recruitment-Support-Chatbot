@@ -21,7 +21,9 @@
                 "apa kabar",
                 "P",
                 "Ping",
-                "helo"
+                "helo",
+                "hola",
+                "Hola"
             ],
             "response": [
                 "Halo, Kak!", "Hai :D", "Halo, ada yang bisa saya bantu? :)", "Hai hai!", "Hola!"
@@ -103,7 +105,8 @@
                 "belum punya pengalaman mau daftar",
                 "pengalaman lebih dari tiga tahun mau lamar",
                 "syarat jadi harus bisa apa aja?",
-                "syarat jadi apa?"
+                "syarat jadi apa?",
+                "kualifikasi jadi data scientist apa nih"
             ],
             "response": [
                 "Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"
@@ -198,7 +201,8 @@
                 "apakah ijazah master boleh",
                 "apakah ijazah magister boleh",
                 "saya belum lulus min gimana",
-                "min transkrip nilai saya ada 2 lembar "
+                "min transkrip nilai saya ada 2 lembar ",
+                "ko saya gabisa upload transkrip yah?"
             ],
             "response": [
                 "Ijazah dan transkrip merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rSetiap dokumen yang terdiri lebih dari 1 halaman (seperti transkrip nilai terdiri dari 2 lembar atau ijazah untuk lebih dari 1 pendidikan strata yang relevan dengan posisi yang dilamar), harap disatukan dalam 1 file dokumen masing-masing untuk ijazah dan transkrip dan pastikan tidak lebih dari 1 MB. Scan Ijazah dan transkrip nilai yang asli dan upload di link https://rekrutmen.fiktif.id/. Jika belum mendapatkan ijazah harap mencantumkan Surat Keterangan Lulus dari institusi terkait"
@@ -274,7 +278,19 @@
                 "apa saja to do list?",
                 "bertanggung jawab atas apa saja?",
                 "tanggung jawab apa saja?",
-                "apa saja yang akan dilakukan?"
+                "apa saja yang akan dilakukan?",
+                "data scientist kerjaannya ngapain aja ",
+                "jobdesc data scientist apa aja",
+                "jobdesc data analyst apa aja",
+                "jobdesc data engineer apa aja",
+                "jobdesc ds apa aja",
+                "jobdesc de apa aja",
+                "jobdesc da apa aja",
+                "jobdesc data analis apa aja",
+                "jobdesc scientist apa aja",
+                "jobdesc analyst apa aja",
+                "jobdesc engineer apa aja",
+                "jobdesc analis apa aja"
             ],
             "response": [
                 "Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"
@@ -347,7 +363,12 @@
                 "ujian dimana",
                 "ujiannya dimana",
                 "dimana ujiannya",
-                "dimana ujian"
+                "dimana ujian",
+                "Kapan terakhir penutupan lowongan pekerjaan?",
+                "Kapan loker ditutup",
+                "Deadline lowongan kapan",
+                "wawancara dimana?",
+                "Testnya dimana?"
             ],
             "response": [
                 "Berikut keterangan tempat dan tanggal rekrutmen ya, Kak:\n1. Pendaftaran online 1 Jan 2025 s/d 20 Jan 2025\n2. Pengumuman kelulusan administrasi online 30 Jan 2025\n3. Tes Kemampuan Dasar dan Psikologi (TKDP) di kantor cabang PT Fiktif 10 Feb 2025 s/d 20 Feb 2025\n4. Pengumuman kelulusan TKDP 28 Feb 2025\n5. Tes Kemampuan Bidang dan Wawancara (TKBW) di kantor cabang PT Fiktif 10 Mar 2025 s/d 14 Mar 2025\n6. Pengumuman penerimaan 31 Mar 2025"
@@ -433,7 +454,8 @@
                 "calo", 
                 "sogok", 
                 "suap", 
-                "bayar"
+                "bayar",
+                "berapa total biaya yg dihabiskan untuk daftar?"
             ],
             "response": [
                 "Proses rekrutmen di PT Fiktif tidak dipungut biaya sepeser pun ya.\n\nJika ada pihak yang menjanjikan penerimaan dengan meminta bayaran, jangan diikuti ya karena bisa dipastikan bahwa pihak tersebut adalah penipu.\n\nSetiap upaya suap-menyuap sebagaimana yang dimaksudkan sebelumnya akan ditindak secara tegas oleh pihak berwajib sesuai dengan hukum dan aturan yang berlaku."
@@ -462,7 +484,10 @@
                 "kata sandi apa",
                 "password", 
                 "sandi", 
-                "kata sandi"
+                "kata sandi",
+                "bagaimana recovery password yang lupa?",
+                "Password lupa, bagaimana caranya?",
+                "cara balikan password?"
             ],
             "response": [
                 "Jika kehilangan atau lupa dengan password akun, silakan klik link berikut https://rekrutmen.fiktif.id/lupapassword dan ikuti petunjuk di halaman tersebut ya, Kak. Pastikan email Kakak dapat diakses. Sistem akan mengirimkan email untuk konfirmasi pengaturan ulang password.\n\nPassword harus terdiri dari minimal 8 karakter dan merupakan kombinasi dari angka, huruf besar, dan huruf kecil.\n\nJika password telah berhasil diganti, Kakak bisa login lagi menggunakan password baru yang telah dibuat.\n\nPasswordnya jangan diberitahu ke orang lain ya untuk menjaga keamanan data Kakak."
@@ -507,7 +532,8 @@
                 "jumlah uang", 
                 "jumlah duit",
                 "digaji berapa ya?",
-                "salary berapa?"
+                "salary berapa?",
+                "berapa salarynya"
             ],
             "response": [
                 "Rentang gaji untuk seluruh posisi akan bergantung pada Tes Kemampuan Bidang dan Wawancara (TKBW). Gaji yang diterima selama tiga bulan masa percobaan adalah 60% dari yang disepakati saat tanda tangan perjanjian kerja."
@@ -537,7 +563,13 @@
                 "berapa lama durasi training", 
                 "berapa lama durasi pelatihan", 
                 "berapa lama durasi masa percobaan", 
-                "berapa lama durasi kontrak"
+                "berapa lama durasi kontrak",
+                "ada magangnya dulu ga? ",
+                "ada internnya dulu ga?",
+                "ada intern dulu ga?",
+                "ada internship dulu ga?",
+                "ada sejenis trainingnya gitu ga?",
+                "apakah ada mentor/pembimbingnya?"
             ],
             "response": [
                 "Setiap pegawai baru akan mendapatkan pelatihan dari perusahaan dengan didampingi mentor dari masing-masing divisi. Pelatihan akan dilakukan selama satu bulan pertama di dalam masa percobaan.\n\nSelama masa percobaan, setiap pegawai baru akan mendapatkan serangkaian tugas yang berkaitan dengan pekerjaannya.\n\nDi akhir masa percobaan, mentor akan mengevaluasi performa pegawai baru dan menentukan apakah pegawai baru akan menjadi pegawai tetap atau akan mengakhiri kontrak kerja saat itu juga."
@@ -561,7 +593,8 @@
                 "KTP itu apa sih?", 
                 "Mengapa harus mengumpulkan KTP?", 
                 "KTP harus discan saja?",
-                "kalau ktpnya hilang bagaimana"
+                "kalau ktpnya hilang bagaimana",
+                "ktpku hilang, gimana nih?"
             ],
             "response": [
                 "KTP (Kartu Tanda Penduduk) menjadi persyaratan wajib pendaftaran. File KTP yang diupload berukuran bebas dan tidak lebih dari 1 MB dalam format file jpg, png, atau jpeg. KTP dan dokumen wajib pendaftaran harus diupload di https://rekrutmen.fiktif.id/dokumen.\n\nKTP yang hilang atau rusak dapat digantikan dengan membawa surat kehilangan dari Polda/Polsek/Polres terdekat dan disampaikan ke Dinas Kependudukan dan Catatan Sipil untuk mendapatkan KTP pengganti atau Surat Keterangan yang dapat mewakili KTP."
@@ -585,7 +618,14 @@
                 "pasfoto ukuran berapa",
                 "gimana ketentuan pas foto",
                 "kemeja atau jas buat pasfoto",
-                "apa yang harus dilakukan jika ukuran foto lebih dari 1mb"
+                "apa yang harus dilakukan jika ukuran foto lebih dari 1mb",
+                "selfie boleh ga",
+                "foto keluarga di crop boleh min?",
+                "Foto diri",
+                "Pas photo",
+                "gapunya foto gimana min",
+                "Crop foto apakah boleh?",
+                "Boleh foto selfie tidak"                 
             ],
             "response": [
                 "Pas foto merupakan dokumen wajib pendaftaran ya, Kak.\n\n\rBerikut ketentuan pas foto yang harus dipenuhi:\n- Background berwarna biru dengan pakaian formal (kemeja dan/atau jas)\n- Foto berukuran 3x4 dan berwarna\n- Disarankan untuk menggunakan foto terbaru\n- Upload foto di https://rekrutmen.fiktif.id/dokumen dengan ukuran file tidak lebih dari 1 MB dengan format file jpg/png/jpeg\n\n\rKalau ukuran file melebihi, silahkan diperkecil dulu dengan aplikasi untuk edit foto."
@@ -596,6 +636,8 @@
             "input": [
                 "Apa Twitter PT Fiktif?", 
                 "Apakah Sosmed PT Fiktif selalu update?", 
+                "Apakah medsos PT Fiktif selalu update?",
+                "Apakah social media PT Fiktif selalu update?",
                 "Apa Facebook PT Fiktif?", 
                 "Apa Linkedln PT Fiktif ?", 
                 "Apakah Instagram PT Fiktif", 
@@ -606,11 +648,30 @@
                 "Apa Facebook PT Fiktif",
                 "ada sosmed lain kah?",
                 "sosmed kak ",
+                "ada medsos lain kah?",
+                "medsos kak ",
+                "ada social media lain kah?",
+                "social media kak ",
                 "twitter",
                 "instagram",
                 "facebook",
                 "youtube",
-                "linkedin"
+                "linkedin",
+                "boleh minta link sosmed?",
+                "sosmed pt fiktif apa nih",
+                "boleh minta link medsos?",
+                "medsos pt fiktif apa nih",
+                "boleh minta link media sosial?",
+                "media sosial pt fiktif apa nih",
+                "boleh minta link social media?",
+                "social media pt fiktif apa nih",
+                "instagramnya apa",
+                "ada sosmednya?",
+                "ada medsosnya?",
+                "medsosnya kak",
+                "Apakah Medsos PT Fiktif selalu update?",
+                "Mengapa harus follow sosmed?",
+                "medsos PT.fiktif apa?"
             ],
             "response": [
                 "Informasi terbaru rekrutmen PT Fiktif dapat dilihat di sosial media kami ya dengan nama akun @FiktifID di Facebook, Instagram, dan Twitter. Jangan lupa follow dan subscribe ;)"
@@ -627,7 +688,11 @@
                 "File terlalu besar padahal sudah pas, bagaimana cara uploadnya?",
                 "Upload lama sekali, apakah sedang gangguan?",
                 "Error Mulu, gimana cara uploadnya sih?", 
-                "Upload lama banget terus gagal, gimana ya caranya ?"
+                "Upload lama banget terus gagal, gimana ya caranya ?",
+                "kenapa gabisa upload berkas",
+                "error upload berkas terus nih",
+                "error terus nih uploadnya",
+                "kenapa saya gabisa upload yah"
             ],
             "response": [
                 "Pastikan dokumen yang diupload telah memenuhi persyaratan yang diminta ya, Kak. Persyaratannya bisa dicek di https://rekrutmen.fiktif.id/ketentuan \n\nPastikan dokumen yang diupload tidak lebih dari 1 MB per dokumen.\nKalau masih mengalami kendala saat upload, mohon tunggu beberapa waktu untuk mencoba lagi ya."
@@ -645,7 +710,13 @@
                 "PT Fiktif Bergerak dibidang apa sih?",
                 "PT Fiktif perusahaan apa?", 
                 "PT Fiktif? Perusahaan apa itu?",
-                "Apa itu PT Fiktif?"
+                "Apa itu PT Fiktif?",
+                "perusahaan apaan tuh",
+                "perusahaan apa",
+                "perusahaan apa itu",
+                "company apaan tuh",
+                "company apa",
+                "company apa itu"
             ],
             "response": [
                 "PT Fiktif adalah perusahaan Fintech yang bergerak di bidang digital payment dan mengutamakan keamanan data, kenyamanan, serta kemudahan pelanggan."
