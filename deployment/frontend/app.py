@@ -14,6 +14,7 @@ from telegram.ext.callbackcontext import CallbackContext
 from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.filters import Filters
+import spacy
 
 global TOKEN
 global URL
@@ -55,6 +56,8 @@ std_word_replace = {}
 for i, row in enumerate(baku['slang']):
     std_word_replace[row] = baku['baku'].iloc[i]
 
+# Load ner model
+ner = spacy.load('model-best')
 
 # Create text cleaning function
 def clean_text(text):
@@ -86,9 +89,9 @@ with open("saved_model/encoder.pkl", "rb") as f:
     le = pickle.load(f)
 
 
-URL_backend = 'https://fiktifid-bot.herokuapp.com/'
-URL = 'https://fikbot-hook.herokuapp.com/'
-TOKEN = ''
+URL_backend = '' # Link heroku tf model
+URL = '' # Link heroku preprocessing
+TOKEN = '' # Token from botfather telegram
 
 
 @app.route('/')
@@ -112,44 +115,60 @@ def reply(update, context):
     r = requests.post(URL_backend, json=data)
     resp = r.json()
     label_idx = int(resp['prediction'])
-    if label_idx != 1000:
-        i = 0
-        while i < len(intent_json['intents']):
-            if le.classes_[label_idx] == intent_json['intents'][i]['intent'] and (le.classes_[label_idx] != 'responsibilities' or le.classes_[label_idx] != 'qualification'):
-                response = intent_json['intents'][i]['response']
-                break
-            elif le.classes_[label_idx] == 'responsibilities':
-                if any(x in clean_input for x in ['scientist', 'ds']):
-                    response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"]
+    try:
+        try:
+            dok = ner(data['user_input'])
+        except:
+            dok = 0
+        if label_idx != 1000:
+            i = 0
+            while i < len(intent_json['intents']):
+                if le.classes_[label_idx] == intent_json['intents'][i]['intent'] and (le.classes_[label_idx] != 'responsibilities' or le.classes_[label_idx] != 'qualification'):
+                    response = intent_json['intents'][i]['response']
                     break
-                elif any(x in clean_input for x in ['engineer', 'de']):
-                    response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Engineer:\n- Membangun dan menjaga end-to-end data pipeline dari input dan output heterogen\n- Menangani dan mengelola data warehouse\n- Membantu tim mentransformasikan data (ETL) dan mengembangkan proses ETL dari beberapa sumber\n- Menganalisis dan mengorganisir data mentah \n- Memastikan kualitas data dan integrasi data"]
-                    break
-                elif any(x in clean_input for x in ['analyst', 'da', 'analis']):
-                    response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Analyst:\n- Mengumpulkan dan menyediakan data untuk membantu stakeholder lain meningkatkan metrik bisnis perusahaan dan retensi pelanggan\n- Menganalisis data untuk menemukan insight yang dapat ditindaklanjuti seperti membuat funnel conversion analysis, cohort analysis, long-term trends, user segmentation, dan dapat membantu meningkatkan kinerja perusahaan dan mendukung pengambilan keputusan yang lebih baik\n - Mengidentifikasi kebutuhan dan peluang bisnis berdasarkan data yang tersedia"]
-                    break
-            elif le.classes_[label_idx] == 'qualification':
-                if any(x in clean_input for x in ['scientist', 'ds']):
-                    response = ["Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
-                    break
-                elif any(x in clean_input for x in ['engineer', 'de']):
-                    response = ["Untuk posisi Data Engineer ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pengalaman bekerja dengan tools untuk ETL seperti AWS Glue, SSIS, Informatica, dll.\n3. Memiliki pengalaman kerja di bidang Data Engineer selama 1-3 tahun\n4. Memiliki pemahaman yang baik tentang ETL, SQL, dan noSQL\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
-                    break
-                elif any(x in clean_input for x in ['analyst', 'da', 'analis']):
-                    response = ["Untuk posisi Data Analyst ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik dan Inferensial untuk mencari peluang bisnis\n3. Memiliki pengalaman kerja di bidang Data Analyst selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data serta visualisasi dengan tools seperti Power BI, Tableau, dll.\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
-                    break
-            else:
-                i+=1
-    else:
-        response = ['Maaf, Kak. Aku tidak mengerti chatnya...']
+                elif le.classes_[label_idx] == 'responsibilities':
+                    if dok.ents[0].label_.lower() == "scientist":
+                        response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Scientist:\n- Merancang dan mengembangkan berbagai solusi Machine Learning dan Deep Learning untuk meningkatkan pengalaman pengguna bagi konsumen\n- Berkolaborasi dengan seluruh elemen bisnis dan bertanggung jawab untuk merencanakan solusi end-to-end berbasis data untuk menyelesaikan permasalahan bisnis\n- Menjadi thinking partner bagi stakeholder lain untuk memperbaiki alur perjalanan data dan penggunaannya dalam operasional perusahaan, misal merancang proses feedback-loop atau human-in-the-loop untuk meningkatkan performa model secara berkelanjutan"]
+                        break
+                    elif dok.ents[0].label_.lower()=='engineer':
+                        response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Engineer:\n- Membangun dan menjaga end-to-end data pipeline dari input dan output heterogen\n- Menangani dan mengelola data warehouse\n- Membantu tim mentransformasikan data (ETL) dan mengembangkan proses ETL dari beberapa sumber\n- Menganalisis dan mengorganisir data mentah \n- Memastikan kualitas data dan integrasi data"]
+                        break
+                    elif dok.ents[0].label_.lower()=='analis':
+                        response = ["Berikut adalah tanggung jawab yang akan diberikan untuk posisi Data Analyst:\n- Mengumpulkan dan menyediakan data untuk membantu stakeholder lain meningkatkan metrik bisnis perusahaan dan retensi pelanggan\n- Menganalisis data untuk menemukan insight yang dapat ditindaklanjuti seperti membuat funnel conversion analysis, cohort analysis, long-term trends, user segmentation, dan dapat membantu meningkatkan kinerja perusahaan dan mendukung pengambilan keputusan yang lebih baik\n - Mengidentifikasi kebutuhan dan peluang bisnis berdasarkan data yang tersedia"]
+                        break
+                    else:
+                        response = intent_json['intents'][i]['response']
+                        break
+                elif le.classes_[label_idx] == 'qualification':
+                    dok = ner(data['user_input'])
+                    if dok.ents[0].label_.lower()=='scientist':
+                        response = ["Untuk posisi Data Scientist ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik, Machine Learning, Deep Learning untuk menyelesaikan permasalahan bisnis\n3. Memiliki pengalaman kerja di bidang Data Science selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
+                        break
+                    elif dok.ents[0].label_.lower()=='engineer':
+                        response = ["Untuk posisi Data Engineer ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pengalaman bekerja dengan tools untuk ETL seperti AWS Glue, SSIS, Informatica, dll.\n3. Memiliki pengalaman kerja di bidang Data Engineer selama 1-3 tahun\n4. Memiliki pemahaman yang baik tentang ETL, SQL, dan noSQL\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
+                        break
+                    elif dok.ents[0].label_.lower()=='analis':
+                        response = ["Untuk posisi Data Analyst ada beberapa kualifikasi yang harus dipenuhi:\n1. Memiliki gelar sarjana di bidang informatika, ilmu komputer, statistika, matematika, atau bidang lain yang berhubungan\n2. Memiliki pemahaman mendasar tentang Statistika Analitik dan Inferensial untuk mencari peluang bisnis\n3. Memiliki pengalaman kerja di bidang Data Analyst selama 1-3 tahun\n4. Memiliki pemahaman dan pengalaman tentang Big Data serta visualisasi dengan tools seperti Power BI, Tableau, dll.\n5. Memiliki kemampuan bekerja sama, kepemimpinan, dan problem solving yang baik"]
+                        break
+                    else:
+                        response = intent_json['intents'][i]['response']
+                        break
+                else:
+                    i+=1
+        else:
+            response = ['Maaf, Kak. Aku tidak mengerti chatnya...']
+    except:
+        print("error")
+        response = ['Maaf, Kak. Aku tidak mengerti chatnya...\n\n\rTerjadi error']
     update.message.reply_text(np.random.choice(response))
+
 
 
 def error(update: Update, context: CallbackContext):
     print(f"update{update} caused error {context.error}")
 
 
-PORT = int(os.environ.get('PORT', '8443'))
+PORT = int(os.environ.get('PORT', '443'))
 
 
 def main():
@@ -170,5 +189,5 @@ def main():
         )
     updater.idle()
 
-    
+  
 main()

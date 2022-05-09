@@ -8,3 +8,4 @@ telegram
 python-telegram-bot
 requests
 scikit-learn
+spacy
