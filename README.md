@@ -8,7 +8,8 @@ After updating model, do the following:
 - Copy saved_model folder to deployment/backend
 - Copy saved_model folder, intent folder, and lexicon folder to deployment/frontend
 
-Co-developed with:
+Developed by:
+- https://github.com/Riezn
 - https://github.com/Fathiyahkhaq
 - https://github.com/Ridzkid
 - https://github.com/bayuPramanaPutra
