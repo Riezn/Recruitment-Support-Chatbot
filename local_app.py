@@ -101,8 +101,8 @@ def clean_text(text):
 def bot_response(text):
     """Take text as function input then predict using model. Return response based on highest probability using numpy argmax    
     """
-    text = clean_text(text)
-    pred = model.predict([text])
+    text = clean_text(text) # cleaning the text
+    pred = model.predict([text]) # predict the label of the cleaned text
     res = le.classes_[pred.argmax()] # Get the index with highest probability
     i = 0
     try:
